@@ -4,8 +4,6 @@
 
 This setup deploys an application using AWS ECS Fargate, providing a fully managed, scalable environment for containerized applications. The architecture includes everything needed to run a scalable application, such as an Application Load Balancer (ALB), ECS Cluster, CloudWatch for monitoring, Auto Scaling, and secure networking. All of this is provisioned using Terraform.
 
-
-
 ## Key Components
 
 ### 1. **VPC and Subnets**
@@ -79,7 +77,10 @@ Configures security groups for the ALB and ECS tasks, ensuring controlled access
 
 ## Architecture Diagram
 
-The architecture diagram shows the flow of components:
+The architecture diagram below shows the flow of components:
+
+![Architecture Diagram](./aws_ecs_fargate_architecture.png)
+
 - **VPC** with Public and Private Subnets.
 - **ALB** distributing traffic to ECS tasks.
 - **Auto Scaling** manages ECS task counts based on CPU load.
@@ -125,6 +126,3 @@ The architecture diagram shows the flow of components:
 To remove the deployed resources and avoid ongoing charges, run:
 
 `terraform destroy`
-
-
-
